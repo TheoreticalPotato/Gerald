@@ -2,7 +2,7 @@
 import subprocess 
 import wolframalpha # pip install wolframaplha
 # wolfram alpha client key
-client = wolframalpha.Client("KT955E-4QYKLV4VE5")
+client = wolframalpha.Client("API keys here")
 import pyttsx3 # pip install pyttsx3
 import speech_recognition as sr # pip install speech_recognition
 import datetime # pip install datetime
