@@ -8,7 +8,7 @@ import speech_recognition as sr # pip install speech_recognition
 import datetime # pip install datetime
 import wikipedia # pip install wikipedia
 import webbrowser # pip install webbrowser
-from AppOpener import run #AAAAAAAAAAAAA
+from AppOpener import run
 import pyttsx3 # pip install pyttsx3
 
 # text to speech setup, engine,
