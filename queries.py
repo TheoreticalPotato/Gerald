@@ -1,9 +1,9 @@
-import wikipedia # pip install wikipedia
-import webbrowser # pip install webbrowser
+import wikipedia
+import webbrowser
 from AppOpener import run
 import subprocess
-import datetime # pip install datetime
-import wolframalpha # pip install wolframaplha
+import datetime
+import wolframalpha
 # WolframAlpha client key
 client = wolframalpha.Client("<API KEY>")
 

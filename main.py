@@ -4,6 +4,6 @@ from speech import speak
 from queries import queries
 
 if __name__ == '__main__':
-    greeting()
+    greeting() # Greets user
     speak("what can I do for you today")
-    queries()
+    queries() # Listens for queries

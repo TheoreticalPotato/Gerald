@@ -1,4 +1,4 @@
-import speech_recognition as sr # pip install speech_recognition
+import speech_recognition as sr
 
 # Takes command
 def takeCommand():

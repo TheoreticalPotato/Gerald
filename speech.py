@@ -1,4 +1,4 @@
-import pyttsx3 # pip install pyttsx3
+import pyttsx3
 
 # TTS setup
 engine = pyttsx3.init('sapi5')                    

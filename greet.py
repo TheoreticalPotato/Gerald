@@ -1,4 +1,4 @@
-import datetime # pip install datetime
+import datetime
 
 from speech import speak
 
