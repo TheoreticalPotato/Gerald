@@ -37,7 +37,7 @@ def greeting():
     else:
         speak("Good Evening") 
 
-#takes your command
+#takes your command and reads it
 def takeCommand():
     
     r = sr.Recognizer()
