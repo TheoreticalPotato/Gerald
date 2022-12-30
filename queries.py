@@ -41,25 +41,7 @@ def queries():
             query = query.replace("open", "")
             speak(f"opening {query}")
             run(query)
-
-        # Reboots computer
-        elif "restart" in query:        
-            subprocess.call(["shutdown", "/r"])
-            exit()
-
-        # Shuts down computer
-        elif 'shutdown' in query:
-            speak("shutting down your computer")
-            subprocess.call('shutdown /s')
-            exit()
-
-        # Terminates program
-        elif 'exit' in query:
-            speak("killing gerald")
-            speak("what a world. what a world.")
-            print("you have killed Gerald, you monster")
-            exit()
-        
+            
         # Returns time
         elif 'time' in query:   
             speak("The time is now: %s:%s" % (currentTime.hour, currentTime.minute))

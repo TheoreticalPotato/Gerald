@@ -1,0 +1,26 @@
+{"intents":[
+    {"tag": "greetings",
+    "patterns": ["hello", "hey", "hi", "good day", "greetings", "howdy", "what's up"],
+    "responses": ["Hello, what can I do for you today?"]
+},
+    {"tag": "time",
+    "patterns": ["what is the time", "time", "what's the time", "what time is it"],
+    "responses": ["The time is currently [hour], [minute]"]
+},
+    {"tag": "exit",
+    "patterns": ["exit", "exit gerald", "shut down gerald", "turn off gerald"],
+    "responses": ["Shutting down gerald"]
+},
+    {"tag": "wolframAlpha",
+    "patterns": ["calculate", "what's", "what is", "answer", "search", "define", "synonyms", "antonyms", "weather"],
+    "responses": ["The answer to [query] is [response]"]
+},
+    {"tag": "openApp",
+    "patterns": ["open", "open up"],
+    "responses": ["Opening [query]"]
+},
+    {"tag": "news",
+    "patterns": ["news", "whats on the news", "open the news", "what's going on in the world"],
+    "responses": ["opening news"]
+}
+]}
