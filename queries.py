@@ -1,3 +1,4 @@
+'''Converts The Command Into An Action'''
 import wikipedia
 import webbrowser
 from AppOpener import run
@@ -5,7 +6,7 @@ import subprocess
 import datetime
 import wolframalpha
 # WolframAlpha client key
-client = wolframalpha.Client("<API KEY>")
+client = wolframalpha.Client("KT955E-4QYKLV4VE5")
 
 from diction import takeCommand
 from speech import speak

@@ -1,3 +1,4 @@
+'''Take Voice Command'''
 import speech_recognition as sr
 
 # Takes command

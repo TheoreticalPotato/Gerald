@@ -1,3 +1,4 @@
+'''Greeting Depending On The Time Of Day'''
 import datetime
 
 from speech import speak

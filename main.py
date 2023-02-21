@@ -1,3 +1,4 @@
+'''Main'''
 from greet import greeting
 from diction import takeCommand
 from speech import speak
