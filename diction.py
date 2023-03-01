@@ -1,5 +1,7 @@
 '''Take Voice Command'''
 import speech_recognition as sr
+import keyboard as kb
+from popup import popup
 
 # Takes command
 def takeCommand():
@@ -26,6 +28,7 @@ def takeCommand():
         query = query.replace("Gerald", "")
         query = query.replace("hey", "")
         return query
+    
     # Will not register if query does not incklude "Gerald"
     else:
         query = ""

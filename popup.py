@@ -19,20 +19,23 @@ elif hour >= 12 and hour<18:
 else:
     greeting = "Good Evening"
 
-layout = [ [sg.Text(greeting)],
-        [sg.Text('What can I do for you?')], [sg.InputText()],
-        [sg.Button('ok')], [sg.Button('Cancel)')]]
-
-window = sg.Window('Gerald', layout)
+sg.theme('DarkAmber')   # Add a touch of color
+# All the stuff inside your window.
+layout = [  [sg.Text(greeting)],
+            [sg.Text('What can I do for you today'), sg.InputText()],
+            [sg.Button('Ok'), sg.Button('Cancel')] ]
 
 def popup():
-    while True: 
-        sg.Window(layout)
-    
+    # Create the Window
+    window = sg.Window('Window Title', layout)
+    # Event Loop to process "events" and get the "values" of the inputs
+    while True:
         event, values = window.read()
-        if event == sg.WIN_CLOSED or event == 'Cancel' or kb.is_pressed('escape'): # if user closes window or clicks cancel
+        if event == sg.WIN_CLOSED or event == 'Cancel': # if user closes window or clicks cancel
             break
         print('You entered ', values[0])
+
+    window.close()
     
 
         
