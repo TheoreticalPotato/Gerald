@@ -67,57 +67,10 @@ def queries():
 
 
     #* WolframAlpha
-        # Returns weather at current location via WolframAlpha
-        elif "weather" in query:
-            res = client.query(query)                             
-            wolfram_res = next(res.results).text
-            speak(f"the weather is currently {wolfram_res}")
-            print(wolfram_res)
-
-        #* Vocabulary
-        # Returns definition of word via WolframAlpha
-        elif "definition" in query:
+    #uses wolframlaph as a backup
+        else:
             query = query.replace("define", "")
             res = client.query(query)                             
             wolfram_res = next(res.results).text
-            speak(f"the definition of {query} is {wolfram_res}")
-            print(wolfram_res)
-
-        # Returns synonyms via WolframAlpha
-        elif "synonyms" in query:
-            res = client.query(query)
-            wolfram_res = next(res.results).text
-            speak(f"synonyms for {query} are {wolfram_res}")
-            print(wolfram_res)
-
-        # Returns antonyms via WolframAlpha
-        elif 'antonyms' in query:
-            res = client.query(query)
-            wolfram_res = next(res.results).text
-            speak(f"synonyms for {query} are {wolfram_res}")
-            print(wolfram_res)
-
-        #* Math
-        # Calculates math problem via WolframAlpha
-        elif 'calculate' in query:  
-            query = query.replace("calculate", "")
-            res = client.query(query)                             
-            wolfram_res = next(res.results).text
-            speak(f"the answer to {query} is {wolfram_res}")
-            print(wolfram_res)
-
-        #! Keep this at the bottom
-        # Calculates math problem using WolframAlpha
-        elif "what's" in query:  
-            query = query.replace("what's", "")
-            res = client.query(query)                             
-            wolfram_res = next(res.results).text
-            speak(f"the answer to {query} is {wolfram_res}")
-            print(wolfram_res)
-        #calculates your math problem using wolfram alpha
-        elif 'what is' in query:
-            query = query.replace("what is", "")
-            res = client.query(query)                             
-            wolfram_res = next(res.results).text
-            speak(f"the answer to {query} is {wolfram_res}")
+            speak(wolfram_res)
             print(wolfram_res)

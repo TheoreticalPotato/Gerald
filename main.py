@@ -8,7 +8,6 @@ from popup import popup
 
 if __name__ == '__main__':
     greeting() # Greets user
-    speak("what can I do for you today")
     queries() # Listens for queries
     
     if kb.is_pressed('right shift'):

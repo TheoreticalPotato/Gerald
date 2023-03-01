@@ -15,3 +15,6 @@ def greeting():
     # Returns good evening if time is 18pm - 12am
     else:
         speak("Good Evening")
+    
+    speak("what can I do for you today")
+        
