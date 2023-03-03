@@ -1,8 +1,8 @@
 '''Gerald Quick Popup'''
 import PySimpleGUI as sg
 import keyboard as kb
-import greet
 import datetime
+from popupQueries import popupQueries
 
 #pysimplegui layout
 
@@ -34,8 +34,16 @@ def popup():
         if event == sg.WIN_CLOSED or event == 'Cancel': # if user closes window or clicks cancel
             break
         print('You entered ', values[0])
+        popupQueries(values[0])
 
     window.close()
+
+while True:
+    if kb.is_pressed('right shift'):
+        popup()
+
+
+
     
 
         
