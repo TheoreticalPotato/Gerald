@@ -18,7 +18,6 @@ if __name__ == '__main__':
     funcQueries.start()
 
     #ques and runs the popup when you press right shift
-    #! currently has an error and I dont understand it
     funcPopup = Process(target = popup)
     while True:
         if kb.is_pressed('right shift'):
