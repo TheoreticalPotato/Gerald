@@ -38,10 +38,6 @@ def popup():
 
     window.close()
 
-while True:
-    if kb.is_pressed('right shift'):
-        popup()
-
 
 
     

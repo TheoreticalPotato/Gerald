@@ -9,6 +9,7 @@ import wolframalpha
 client = wolframalpha.Client("KT955E-4QYKLV4VE5")
 
 import PySimpleGUI as sg
+import time
 
 def popupQueries(question):
     while True:
@@ -20,6 +21,8 @@ def popupQueries(question):
             question = question.replace("search", "")
             sg.Popup("searching on the web")
             webbrowser.open(question)
+            
+            sg.closePopup()
 
         # Wikipedia search
         elif 'wikipedia' in question:  
