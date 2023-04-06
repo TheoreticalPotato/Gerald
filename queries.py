@@ -11,9 +11,6 @@ client = wolframalpha.Client("KT955E-4QYKLV4VE5")
 from diction import takeCommand
 from speech import speak
 
-from popup import popup
-import keyboard as kb
-
 def queries():
     while True:
         query = takeCommand()

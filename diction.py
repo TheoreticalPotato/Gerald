@@ -1,7 +1,5 @@
 '''Take Voice Command'''
 import speech_recognition as sr
-import keyboard as kb
-from popup import popup
 
 # Takes command
 def takeCommand():

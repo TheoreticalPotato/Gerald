@@ -12,4 +12,4 @@ Gerald is a simple voice assistant made by TheoreticalPotato. Gerald is designed
 * datetime: `pip install datetime`
 * WolframAlpha: `pip install wolframaplha`
 * appopener: `pip install appopener`
-* pyaudio: 'pip install pyaudio'
+* pyaudio: `pip install pyaudio`
