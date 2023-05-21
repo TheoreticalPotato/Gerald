@@ -42,7 +42,7 @@ def takeCommand():
         return "None"
     # Replaces 'gerald' and 'hey' so it doesnt mess up the command
     if 'Gerald' in query:
-        query =  remove_before_word(query, "Gerald")
+        query =  remove_before_word(query, "Gerald ")
         return query
     
     # Will not register if query does not incklude "Gerald"

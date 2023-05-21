@@ -67,27 +67,32 @@ def queries():
         elif 'time' in query:   
             speak("The time is now: %s:%s" % (currentTime.hour, currentTime.minute))
 
-        #! puts space before pc idk why help ahhhhh
+        # lights
         elif 'turn on' in query:
-            query = query.replace('turn on ', '')
+            query = query.replace("turn on ", "")
             speak(f'turning on {query} to full brightness')
-            if query[1] == ' ':
-                query.replace(" ", "")
             setFull(query)
 
         elif 'turn off' in query:
-            query = query.replace('turn off ', '')
+            query = query.replace("turn off ", "")
             speak(f'turning off  {query}')
-            if query[1] == ' ':
-                query.replace(" ", "")
-            print (query)
             setOff(query)
+        
+        elif 'set scene PC' in query:
+            query = query.replace("set scene PC ", "")
+            speak(f'setting pc scene to {query}')
+            try:
+                setScene('PC', query)
+            except:
+                speak('sorry, that is not an avalible scene')
+            
+            
 
     #* WolframAlpha
     # uses wolframalpha as a backup
-        else:
-            query = query.replace("define", "")
-            res = client.query(query)                             
-            wolfram_res = next(res.results).text
-            speak(wolfram_res)
-            print(wolfram_res)
+        # else:
+        #     query = query.replace("define", "")
+        #     res = client.query(query)                             
+        #     wolfram_res = next(res.results).text
+        #     speak(wolfram_res)
+        #     print(wolfram_res)
