@@ -84,7 +84,7 @@ def queries():
             setOff(query)
 
     #* WolframAlpha
-    #uses wolframalpha as a backup
+    # uses wolframalpha as a backup
         else:
             query = query.replace("define", "")
             res = client.query(query)                             
