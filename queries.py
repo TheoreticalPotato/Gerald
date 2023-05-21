@@ -10,6 +10,8 @@ client = wolframalpha.Client("KT955E-4QYKLV4VE5")
 
 from diction import takeCommand
 from speech import speak
+from phueCommands import *
+import phueCommands as phue 
 
 def queries():
     while True:
@@ -65,8 +67,24 @@ def queries():
         elif 'time' in query:   
             speak("The time is now: %s:%s" % (currentTime.hour, currentTime.minute))
 
+        #! puts space before pc idk why help ahhhhh
+        elif 'turn on' in query:
+            query = query.replace('turn on ', '')
+            speak(f'turning on {query} to full brightness')
+            if query[1] == ' ':
+                query.replace(" ", "")
+            setFull(query)
+
+        elif 'turn off' in query:
+            query = query.replace('turn off ', '')
+            speak(f'turning off  {query}')
+            if query[1] == ' ':
+                query.replace(" ", "")
+            print (query)
+            setOff(query)
+
     #* WolframAlpha
-    #uses wolframlaph as a backup
+    #uses wolframalpha as a backup
         else:
             query = query.replace("define", "")
             res = client.query(query)                             
