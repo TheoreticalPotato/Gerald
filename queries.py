@@ -1,7 +1,7 @@
 '''Converts The Command Into An Action'''
 import wikipedia
-import webbrowser
-from AppOpener import run
+import webbrowser as wb
+from AppOpener import *
 import subprocess
 import datetime
 import wolframalpha
@@ -23,7 +23,7 @@ def queries():
         if 'search' in query:     
             query = query.replace("search", "")
             speak("searching on the web")
-            webbrowser.open(query)
+            wb.open(query)
 
         # Wikipedia search
         elif 'wikipedia' in query:  
@@ -35,15 +35,69 @@ def queries():
         # Opens Taiwan News in browser
         elif 'news' in query:       
             speak("opening taiwan news")
-            webbrowser.open("taiwannews.com.tw")
+            wb.open("taiwannews.com.tw")
 
 
+
+    #TODO Chatgpt, Reddit, Google Docs, Google Slides, Google Sheets, youtube
     #* System operations
-        # Opens an app
+        # Opens an app or website
         elif 'open' in query:
             query = query.replace("open", "")
-            speak(f"opening {query}")
-            run(query)
+
+            # google drive
+            if 'Google Drive' in query:
+                speak('opening google drive')
+                wb.open('https://drive.google.com', new=0)
+
+            # canvas
+            elif 'canvas' in query:
+                speak('opening canvas')
+                wb.open('https://taipeiamericanschool.instructure.com', new=0)
+            
+            # gmail
+            elif 'Gmail' in query:
+                speak('opening gmail')
+                wb.open('https://gmail.com')
+
+            # chatgpt
+            elif 'chat GPT' in query:
+                speak('opening chat gpt')
+                wb.open('https://chat.openai.com')
+            
+            # reddit
+            elif 'Reddit' in query:
+                speak('opening reddit')
+                wb.open('https://reddit.com')
+
+            # Google Docs
+            elif 'Google Docs' in query:
+                speak('opening google docs')
+                wb.open('https://docs.google.com')
+            
+            # Google Slides
+            elif 'Google Slides' in query:
+                speak('openin google slides')
+                wb.open('https://slides.google.com')
+            
+            # google sheets
+            elif 'Google Sheets' in query:
+                speak('opening google sheets')
+                wb.open('https://sheets.google.com')
+            
+            # YouTube
+            elif 'YouTube' in query:
+                speak('opening youtube')
+                wb.open('https://youtube.com')
+
+            # opens computer application if it cant
+            else:
+                try: 
+                    open(query, match_closest=True)
+                    speak(f'opening {query}')
+                    
+                except: 
+                    speak('sorry, I cannot find that application on your computer')
 
         # Reboots computer
         elif "restart" in query:        
@@ -90,8 +144,7 @@ def queries():
 
     #* WolframAlpha
     # uses wolframalpha as a backup
-        # else:
-        #     query = query.replace("define", "")
+        # elif 'what' or "what's" or "define" or "synonyms" or "antonyms" or 'weather' or 'calculate' in query:
         #     res = client.query(query)                             
         #     wolfram_res = next(res.results).text
         #     speak(wolfram_res)

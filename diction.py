@@ -13,13 +13,6 @@ def remove_before_word(string, word):
     
     return result
 
-# Example usage
-string = "This is a sample string. I want to remove everything before the word 'sample'."
-word = "sample"
-
-new_string = remove_before_word(string, word)
-print(new_string)
-
 # Takes command
 def takeCommand():
     
