@@ -1,8 +1,6 @@
-ip = '192.168.0.33'
-
-
 from phue import Bridge
 
+ip = 'bridge ip'
 b = Bridge(ip)
 
 # b.connect()

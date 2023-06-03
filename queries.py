@@ -6,7 +6,7 @@ import subprocess
 import datetime
 import wolframalpha
 # WolframAlpha client key
-client = wolframalpha.Client("KT955E-4QYKLV4VE5")
+client = wolframalpha.Client("wolframalhpa api key")
 
 from diction import takeCommand
 from speech import speak
