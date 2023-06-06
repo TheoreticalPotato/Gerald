@@ -8,8 +8,9 @@ Gerald is a simple voice assistant made by TheoreticalPotato. Gerald is designed
 * pyttsx3: `pip install pyttsx3`
 * speech_recognition: `pip install SpeechRecognition`
 * wikipedia: `pip install wikipedia`
-* webbrowser: `pip install webbrowser`
 * datetime: `pip install datetime`
 * WolframAlpha: `pip install wolframaplha`
 * appopener: `pip install appopener`
 * pyaudio: `pip install pyaudio`
+* phillipls hue: `pip install phue`
+* azure tts: `pip install azure.cognitiveservices.speech`

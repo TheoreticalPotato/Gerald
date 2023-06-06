@@ -1,5 +1,4 @@
 '''Speech Engine'''
-import pyttsx3
 import azure.cognitiveservices.speech as speechsdk
 
 # TTS setup
